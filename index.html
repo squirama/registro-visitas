@@ -88,7 +88,7 @@
           conocido: this.conocido.value,
           promociones: this.promociones.checked ? 'on' : 'off'
         };
-        fetch('TU_URL_DE_SCRIPT', {
+        fetch('https://script.google.com/macros/s/AKfycbzMDJoa9OOA38nVggm3A865eLBvzq99jSd9uvZ5AKmBhBz-buMXEhZRe-jZFMf9UqDE/exec', {
           method: 'POST',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify(data)
