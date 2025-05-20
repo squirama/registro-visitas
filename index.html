@@ -75,6 +75,36 @@
 
       <button type="submit">Enviar</button>
     </form>
+
+    <!-- Script para enviar datos a Google Apps Script -->
+    <script>
+      document.getElementById('registro-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = {
+          nombre: this.nombre.value,
+          email: this.email.value,
+          telefono: this.telefono.value,
+          ciudad: this.ciudad.value,
+          conocido: this.conocido.value,
+          promociones: this.promociones.checked ? 'on' : 'off'
+        };
+        fetch('TU_URL_DE_SCRIPT', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(data)
+        })
+        .then(r => r.json())
+        .then(res => {
+          if (res.result === 'success') {
+            alert('¡Registro enviado con éxito!');
+            this.reset();
+          } else {
+            alert('Error al enviar: ' + res.error);
+          }
+        })
+        .catch(err => alert('Error de red: ' + err));
+      });
+    </script>
   </div>
 </body>
 </html>
