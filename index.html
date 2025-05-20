@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro de Visitas - Bodegas Care</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    let submitted = false;
+    function formSubmitted() {
+      submitted = true;
+    }
+    function iframeLoaded() {
+      if (submitted) {
+        alert('¡Registro enviado con éxito!');
+        submitted = false;
+        document.getElementById('registro-form').reset();
+      }
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -31,7 +44,9 @@
     </div>
 
     <h1>Formulario de Registro</h1>
-    <form id="registro-form" method="POST">
+    <!-- iframe oculto para envío sin recargar -->
+    <iframe name="hidden_iframe" style="display:none;" onload="iframeLoaded()"></iframe>
+    <form id="registro-form" method="POST" action="https://script.google.com/macros/s/AKfycbzMDJoa9OOA38nVggm3A865eLBvzq99jSd9uvZ5AKmBhBz-buMXEhZRe-jZFMf9UqDE/exec" target="hidden_iframe" onsubmit="formSubmitted()">
       <label for="nombre">Nombre completo*</label>
       <input type="text" name="nombre" id="nombre" required>
 
@@ -75,33 +90,6 @@
 
       <button type="submit">Enviar</button>
     </form>
-
-    <!-- Script para enviar datos a Google Apps Script -->
-    <script>
-      document.getElementById('registro-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const data = {
-          nombre: this.nombre.value,
-          email: this.email.value,
-          telefono: this.telefono.value,
-          ciudad: this.ciudad.value,
-          conocido: this.conocido.value,
-          promociones: this.promociones.checked ? 'on' : 'off'
-        };
-        fetch('https://script.google.com/macros/s/AKfycbzMDJoa9OOA38nVggm3A865eLBvzq99jSd9uvZ5AKmBhBz-buMXEhZRe-jZFMf9UqDE/exec', {
-      method: 'POST',
-      mode: 'no-cors',
-      body: JSON.stringify(data)
-    })
-    .then(() => {
-      alert('¡Registro enviado con éxito!');
-      this.reset();
-    })
-    .catch(err => {
-      console.error(err);
-      alert('Error al enviar');
-    });
-    </script>
   </div>
 </body>
 </html>
