@@ -11,35 +11,39 @@
     <img src="Care-wines-2-e1596727301651-600x237.png" alt="Bodegas Care Logo">
   </header>
   <div class="section">
-   <h1>Normas de Higiene</h1>
-<p><strong>Está usted en una empresa de alimentación, por lo que debe cumplir con una serie de normas de higiene estrictas.</strong></p>
-<p>Todo visitante que acceda a las instalaciones debe leer y aceptar las siguientes normas:</p>
-<ul>
-  <li>Se debe poner en conocimiento de la persona que da acceso si se padece cualquier trastorno digestivo, respiratorio, etc. de carácter medio-grave.</li>
-  <li>Está prohibido tocar cualquier producto en curso de fabricación.</li>
-  <li>Está prohibido fumar en cualquier parte de la instalación comprendida dentro de la valla perimetral.</li>
-  <li>Está prohibido masticar chicle o comer alimento alguno en las salas de fabricación.</li>
-  <li>En general, está prohibido realizar cualquier actividad que pueda ser causa de contaminación de los alimentos.</li>
-</ul>
-
+    <h1>Normas de Higiene</h1>
+    <p><strong>Está usted en una empresa de alimentación, por lo que debe cumplir con una serie de normas de higiene estrictas.</strong></p>
+    <p>Todo visitante que acceda a las instalaciones debe leer y aceptar las siguientes normas:</p>
+    <ul>
+      <li>Se debe poner en conocimiento de la persona que da acceso si se padece cualquier trastorno digestivo, respiratorio, etc. de carácter medio-grave.</li>
+      <li>Está prohibido tocar cualquier producto en curso de fabricación.</li>
+      <li>Está prohibido fumar en cualquier parte de la instalación comprendida dentro de la valla perimetral.</li>
+      <li>Está prohibido masticar chicle o comer alimento alguno en las salas de fabricación.</li>
+      <li>En general, está prohibido realizar cualquier actividad que pueda ser causa de contaminación de los alimentos.</li>
     </ul>
   </div>
+
   <div class="section">
     <div class="illustrations">
       <img src="Silueta-Cara-Chardonnay200.jpg" alt="Ilustración 1">
       <img src="Silueta-Cara-Joven200.jpg" alt="Ilustración 2">
       <img src="Silueta-Cara-Rosado200.jpg" alt="Ilustración 3">
     </div>
+
     <h1>Formulario de Registro</h1>
     <form id="registro-form" method="POST">
       <label for="nombre">Nombre completo*</label>
       <input type="text" name="nombre" id="nombre" required>
+
       <label for="email">Email*</label>
       <input type="email" name="email" id="email" required>
+
       <label for="telefono">Teléfono*</label>
       <input type="tel" name="telefono" id="telefono" required>
+
       <label for="ciudad">Ciudad o país de origen</label>
       <input type="text" name="ciudad" id="ciudad">
+
       <label for="conocido">¿Cómo nos conociste?</label>
       <select name="conocido" id="conocido">
         <option value="google">Google</option>
@@ -50,28 +54,24 @@
       </select>
 
       <div class="checkbox-wrapper" style="text-align: center; margin-top: 30px;">
-        <label for="promociones" style="display: block; font-weight: bold; font-size: 20px; margin-bottom: 15px;">
+        <label for="promociones" style="display: block; font-weight: bold; font-size: 20px; margin-bottom: 10px;">
           Acepto recibir información comercial y promociones.
-        </label>
-        <input type="checkbox" name="promociones" id="promociones" required style="transform: scale(2); display: inline-block;">
+        </label><br>
+        <input type="checkbox" name="promociones" id="promociones" required style="transform: scale(2); margin-top: 10px; display: inline-block;">
       </div>
 
       <div class="toggle" onclick="document.getElementById('proteccion-datos').classList.toggle('hidden')">
         ▶ Ver información sobre protección de datos
       </div>
       <div id="proteccion-datos" class="hidden">
-        <p><strong>Responsable:</strong>Bodegas Añadas S.A.<br>
-Finalidad:<br>
-Garantizar la seguridad y salud de los trabajadores.<br>
-Cumplir con la normativa de prevención de riesgos laborales.<br>
-Legitimación:<br>
-Cumplimiento de una obligación legal (Art. 6.1.c RGPD).<br>
-Derechos:<br>
-Acceso, rectificación, supresión y portabilidad de sus datos, de limitación y oposición a su tratamiento, así como a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de sus datos, cuando procedan.<br>
-Puede ejercer sus derechos de protección de datos enviando un correo electrónico a: bodega@bodegascare.com, o en su defecto, enviando un escrito a: Ctra. Aguarón km 47,100 50400 Cariñena.<br>
-Información adicional:<br>
-Puede solicitar información adicional relativa al presente tratamiento enviando un correo electrónico a bodega@bodegascare.com, o en su defecto, solicitando la misma en la recepción.</p>
+        <p><strong>Responsable:</strong> Bodegas Añadas S.A.<br>
+        <strong>Finalidad:</strong> Garantizar la seguridad y salud de los trabajadores.<br>
+        <strong>Legitimación:</strong> Cumplimiento de una obligación legal (Art. 6.1.c RGPD).<br>
+        <strong>Derechos:</strong> Acceso, rectificación, supresión y portabilidad de sus datos, de limitación y oposición a su tratamiento, así como a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de sus datos, cuando procedan.<br>
+        Puede ejercer sus derechos de protección de datos enviando un correo electrónico a: <a href="mailto:bodega@bodegascare.com">bodega@bodegascare.com</a> o por escrito a: Ctra. Aguarón km 47,100 50400 Cariñena.<br>
+        <strong>Información adicional:</strong> Puede solicitar más información enviando un correo a <a href="mailto:bodega@bodegascare.com">bodega@bodegascare.com</a>.</p>
       </div>
+
       <button type="submit">Enviar</button>
     </form>
   </div>
