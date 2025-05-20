@@ -45,10 +45,10 @@
         <option value="hotel">Hotel/Agencia</option>
         <option value="otro">Otro</option>
       </select>
-      <label class="checkbox-label">
-        <span>Acepto recibir información comercial y promociones.</span>
-        <input type="checkbox" name="promociones" required>
-      </label>
+     <div class="checkbox-wrapper">
+  <input type="checkbox" name="promociones" id="promociones" required>
+  <label for="promociones">Acepto recibir información comercial y promociones.</label>
+</div>
       <div class="toggle" onclick="document.getElementById('proteccion-datos').classList.toggle('hidden')">
         ▶ Ver información sobre protección de datos
       </div>
