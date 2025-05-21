@@ -25,7 +25,7 @@
   </header>
   <div class="section">
     <h1>Normas de Higiene</h1>
-    <p><strong>Está usted en una empresa alimentaria certifcada con la norma FSSC22000.</strong></p>
+    <p><strong>Está usted en una empresa alimentaria certificada con la norma FSSC22000.</strong></p>
     <p>Todo visitante que acceda a las instalaciones debe leer, aceptar y cumplir lo siguiente:</p>
     <ul>
       <li>Si padece cualquier trastorno digestivo, respiratorio, etc. de carácter medio-grave, se debe poner en conocimiento de la persona que le da acceso.</li>
@@ -46,7 +46,8 @@
     <h1>Formulario de Registro</h1>
     <!-- iframe oculto para envío sin recargar -->
     <iframe name="hidden_iframe" style="display:none;" onload="iframeLoaded()"></iframe>
-    <form id="registro-form" method="POST" action="https://script.google.com/macros/s/AKfycby0IvJktCe2tSeP60KtnQh-hqKzWLqhCcYtYcUOjxmTyTi60_VkH32h9dv2ekZE8VwZ/exec">
+    <!-- Asegúrate de incluir target e onsubmit -->
+    <form id="registro-form" method="POST" action="https://script.google.com/macros/s/AKfycby0IvJktCe2tSeP60KtnQh-hqKzWLqhCcYtYcUOjxmTyTi60_VkH32h9dv2ekZE8VwZ/exec" target="hidden_iframe" onsubmit="formSubmitted()">
       <label for="nombre">Nombre completo*</label>
       <input type="text" name="nombre" id="nombre" required>
 
@@ -56,7 +57,7 @@
       <label for="telefono">Teléfono*</label>
       <input type="tel" name="telefono" id="telefono" required>
 
-      <label for="email">Email</label>
+      <label for="email">Email (opcional)</label>
       <input type="email" name="email" id="email">
 
       <div class="checkbox-wrapper" style="text-align: center; margin-top: 30px;">
