@@ -18,103 +18,123 @@
       }
     }
   </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .illustrations img {
+      width: 200px;
+      margin: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <header>
+
+  <header style="text-align: center;">
     <img src="Care-wines-2-e1596727301651-600x237.png" alt="Bodegas Care Logo">
   </header>
+
+  <!-- Normas de Higiene -->
   <div class="section">
-<!-- Título principal bien visible -->
-<h1 style="text-align: center; font-size: 32px; margin-bottom: 20px;">Normas de Higiene</h1>
+    <h1>Normas de Higiene</h1>
 
-<!-- Contenedor general sin font-size global -->
-<div style="max-width: 900px; margin: 0 auto; line-height: 1.8;">
+    <div style="max-width: 900px; margin: 0 auto; line-height: 1.8;">
 
-  <!-- Mensaje institucional (30px) -->
-  <p style="font-size: 30px;">
-    <strong>Está usted en una empresa certificada con la norma FSSC22000 de seguridad alimentaria.</strong>
-  </p>
+      <!-- Mensaje institucional -->
+      <p style="font-size: 30px;">
+        <strong>Está usted en una empresa certificada con la norma FSSC22000 de seguridad alimentaria.</strong>
+      </p>
 
-  <!-- Introducción (26px) -->
-  <p style="font-size: 26px;">
-    <strong>Todo visitante que acceda a las instalaciones debe leer, aceptar y cumplir lo siguiente:</strong>
-  </p>
+      <!-- Introducción -->
+      <p style="font-size: 26px;">
+        <strong>Todo visitante que acceda a las instalaciones debe leer, aceptar y cumplir lo siguiente:</strong>
+      </p>
 
-  <!-- Lista de normas (26px) -->
-  <ul style="list-style-position: outside; padding-left: 30px; margin-left: 0; font-size: 26px;">
-    <li>Si padece cualquier trastorno digestivo, respiratorio, etc. de carácter medio-grave, se debe poner en conocimiento de la persona que le da acceso.</li>
-    <li>Está prohibido manipular cualquier producto en curso de fabricación (desde materia prima a producto acabado).</li>
-    <li>Está prohibido fumar en cualquier parte de la instalación comprendida dentro de la valla perimetral, salvo en zona habilitada para ello.</li>
-    <li>No está permitido comer, masticar chicle, etc., en la bodega.</li>
-    <li>En general, está prohibido realizar cualquier actividad que pueda ser causa de contaminación de los alimentos y/o que pueda interferir en el proceso productivo.</li>
-  </ul>
+      <!-- Lista -->
+      <ul style="list-style-position: outside; padding-left: 30px; margin-left: 0; font-size: 26px;">
+        <li>Si padece cualquier trastorno digestivo, respiratorio, etc. de carácter medio-grave, se debe poner en conocimiento de la persona que le da acceso.</li>
+        <li>Está prohibido manipular cualquier producto en curso de fabricación (desde materia prima a producto acabado).</li>
+        <li>Está prohibido fumar en cualquier parte de la instalación comprendida dentro de la valla perimetral, salvo en zona habilitada para ello.</li>
+        <li>No está permitido comer, masticar chicle, etc., en la bodega.</li>
+        <li>En general, está prohibido realizar cualquier actividad que pueda ser causa de contaminación de los alimentos y/o que pueda interferir en el proceso productivo.</li>
+      </ul>
 
-</div>
-
-
-
-  <div class="section">
-    <div class="illustrations">
-      <img src="Silueta-Cara-Chardonnay200.jpg" alt="Ilustración 1">
-      <img src="Silueta-Cara-Joven200.jpg" alt="Ilustración 2">
-      <img src="Silueta-Cara-Rosado200.jpg" alt="Ilustración 3">
     </div>
+  </div>
 
+  <!-- Ilustraciones -->
+  <div class="section illustrations" style="text-align: center;">
+    <img src="Silueta-Cara-Chardonnay200.jpg" alt="Ilustración 1">
+    <img src="Silueta-Cara-Joven200.jpg" alt="Ilustración 2">
+    <img src="Silueta-Cara-Rosado200.jpg" alt="Ilustración 3">
+  </div>
+
+  <!-- Formulario de Registro -->
+  <div class="section">
     <h1>Formulario de Registro</h1>
+
     <!-- iframe oculto para envío sin recargar -->
     <iframe name="hidden_iframe" style="display:none;" onload="iframeLoaded()"></iframe>
-    <!-- Asegúrate de incluir target e onsubmit -->
-    <form id="registro-form" method="POST" action="https://script.google.com/macros/s/AKfycby0IvJktCe2tSeP60KtnQh-hqKzWLqhCcYtYcUOjxmTyTi60_VkH32h9dv2ekZE8VwZ/exec" target="hidden_iframe" onsubmit="formSubmitted()">
+
+    <form id="registro-form" method="POST"
+          action="https://script.google.com/macros/s/AKfycby0IvJktCe2tSeP60KtnQh-hqKzWLqhCcYtYcUOjxmTyTi60_VkH32h9dv2ekZE8VwZ/exec"
+          target="hidden_iframe" onsubmit="formSubmitted()"
+          style="max-width: 600px; margin: 0 auto; font-size: 18px; line-height: 1.6;">
+
       <label for="nombre">Nombre completo*</label>
-      <input type="text" name="nombre" id="nombre" required>
+      <input type="text" name="nombre" id="nombre" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
 
       <label for="dni">DNI*</label>
-      <input type="text" name="dni" id="dni" required>
+      <input type="text" name="dni" id="dni" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
 
       <label for="telefono">Teléfono*</label>
-      <input type="tel" name="telefono" id="telefono" required>
+      <input type="tel" name="telefono" id="telefono" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
 
       <label for="email">Email</label>
-      <input type="email" name="email" id="email">
+      <input type="email" name="email" id="email" style="width: 100%; padding: 8px; margin-bottom: 10px;">
 
       <div class="checkbox-wrapper" style="text-align: center; margin-top: 30px;">
         <label for="promociones" style="display: block; font-weight: bold; font-size: 20px; margin-bottom: 10px;">
           Acepto recibir promociones e información comercial.
-        </label><br>
+        </label>
         <input type="checkbox" name="promociones" id="promociones" required
-               style="width: 1.5em; height: 1.5em; margin-top: 10px; -webkit-appearance: checkbox; appearance: checkbox;">
+               style="width: 1.5em; height: 1.5em; margin-top: 10px;">
       </div>
 
-      <div class="toggle" onclick="document.getElementById('proteccion-datos').classList.toggle('hidden')">
+      <!-- Protección de datos -->
+      <div class="toggle" onclick="document.getElementById('proteccion-datos').classList.toggle('hidden')" style="cursor: pointer; margin-top: 30px; font-weight: bold; text-align: center;">
         ▶ Ver información sobre protección de datos
       </div>
-      <div id="proteccion-datos" class="hidden">
-<div style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.6; padding: 10px;">
-  <p>
-    <strong>Responsable:</strong> Bodegas Añadas S.A.
-  </p>
-  <p>
-    <strong>Finalidad:</strong> La finalidad de los datos recogidos en el acceso a bodega es garantizar la trazabilidad, el cumplimiento de las normas de higiene, la gestión de riesgos y la seguridad alimentaria y food defense, conforme a los requisitos establecidos por el sistema FSSC 22000.
-  </p>
-  <p>
-    <strong>Legitimación:</strong> Cumplimiento de una obligación legal (Art. 6.1.c RGPD).
-  </p>
-  <p>
-    <strong>Derechos:</strong> Acceso, rectificación, supresión y portabilidad de sus datos, de limitación y oposición a su tratamiento, así como a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de sus datos, cuando procedan.
-  </p>
-  <p>
-    Puede ejercer sus derechos de protección de datos enviando un correo electrónico a: 
-    <a href="mailto:bodega@bodegascare.com">bodega@bodegascare.com</a> o por escrito a: Ctra. Aguarón km 47,100 50400 Cariñena.
-  </p>
-  <p>
-    <strong>Información adicional:</strong> Puede solicitar más información enviando un correo a 
-    <a href="mailto:bodega@bodegascare.com">bodega@bodegascare.com</a>.
-  </p>
-</div>
 
+      <div id="proteccion-datos" class="hidden" style="margin-top: 20px;">
+        <div style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.6; padding: 10px;">
+          <p><strong>Responsable:</strong> Bodegas Añadas S.A.</p>
+          <p><strong>Finalidad:</strong> La finalidad de los datos recogidos en el acceso a bodega es garantizar la trazabilidad, el cumplimiento de las normas de higiene, la gestión de riesgos y la seguridad alimentaria y food defense, conforme a los requisitos establecidos por el sistema FSSC 22000.</p>
+          <p><strong>Legitimación:</strong> Cumplimiento de una obligación legal (Art. 6.1.c RGPD).</p>
+          <p><strong>Derechos:</strong> Acceso, rectificación, supresión y portabilidad de sus datos, de limitación y oposición a su tratamiento, así como a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado de sus datos, cuando procedan.</p>
+          <p>Puede ejercer sus derechos enviando un correo a <a href="mailto:bodega@bodegascare.com">bodega@bodegascare.com</a> o por escrito a: Ctra. Aguarón km 47,100 50400 Cariñena.</p>
+          <p><strong>Información adicional:</strong> Puede solicitar más información enviando un correo a <a href="mailto:bodega@bodegascare.com">bodega@bodegascare.com</a>.</p>
+        </div>
+      </div>
 
-      <button type="submit">Enviar</button>
+      <div style="text-align: center; margin-top: 30px;">
+        <button type="submit" style="font-size: 20px; padding: 10px 30px;">Enviar</button>
+      </div>
+
     </form>
   </div>
+
 </body>
 </html>
